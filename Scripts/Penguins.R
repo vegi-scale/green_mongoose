@@ -28,3 +28,14 @@ penguin_df <- penguins
   scale_fill_manual(values = met.brewer("Archambault", 3)) +
   stat_smooth(method = "lm"))
 
+(penguins_box_fig <- ggplot(penguin_df, aes(x = species, y = bill_length_mm, fill = factor(year))) +
+    geom_boxplot(alpha = 0.8, position = position_dodge(width = 0.75)) +
+    scale_fill_manual(values = met.brewer("Ingres", 3), name = "Year") +
+    labs(
+      title = "Bill length across species and years",
+      x = "Species",
+      y = "Bill length (mm)"
+    ) +
+    theme_bw(base_size = 14)
+)
+
