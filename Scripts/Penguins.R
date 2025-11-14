@@ -20,7 +20,7 @@ penguin_df <- penguins
 # Create a scatter plot with linear relationship 
 (penguins_lm_fig <- ggplot(penguin_df, aes(bill_length_mm, bill_depth_mm, colour = species)) +
   geom_point() +
-  theme_dark ()+ 
+  theme_classic ()+ 
   labs(title = "Association betwween bill length and depth in 3 species of penguins",
         x = "Bill length (mm)",
         y = "Bill depth (mm)") + 
