@@ -3,6 +3,8 @@
 # List of required packages
 packages <- c("palmerpenguins", "tidyverse", "ggplot2", "MetBrewer")
 
+renv::install(c("palmerpenguins", "tidyverse", "ggplot2", "MetBrewer"))
+
 # Install only those that are not yet installed
 installed <- packages %in% installed.packages()
 if (any(!installed)) {
